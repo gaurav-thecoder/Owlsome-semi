@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#05020d">
+
+<title>OWLSOME TECHNOLOGIES — Intelligence, Engineered.</title>
+
+<meta name="description"
+content="Owlsome Technologies — semiconductor, chip architecture, AI hardware and next-generation computing.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   OWLSOME TECHNOLOGIES
+   ULTRA 3D SEMICONDUCTOR EXPERIENCE
+   ========================================================= */
+
+:root {
+    --bg:#030107;
+    --bg2:#080311;
+    --purple:#8b2cff;
+    --purple2:#c35cff;
+    --violet:#6b18ff;
+    --blue:#178cff;
+    --cyan:#38d9ff;
+    --white:#f7f2ff;
+    --muted:#aaa1bd;
+    --glass:rgba(255,255,255,.045);
+    --border:rgba(184,91,255,.22);
+    --shadow:0 0 60px rgba(120,20,255,.18);
+    --font-head:'Orbitron',sans-serif;
+    --font-body:'Space Grotesk',sans-serif;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+    background:var(--bg);
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 0%,rgba(104,22,190,.18),transparent 35%),
+        radial-gradient(circle at 10% 50%,rgba(41,75,255,.07),transparent 30%),
+        var(--bg);
+    color:var(--white);
+    font-family:var(--font-body);
+    overflow-x:hidden;
+}
+
+body::before {
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+    opacity:.035;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255,255,255,.3) 3px
+        );
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea {
+    font:inherit;
+}
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+#loader {
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    background:#020007;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    transition:opacity 1s ease,visibility 1s ease;
+}
+
+#loader.hide {
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-core {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:1px solid rgba(180,80,255,.5);
+    box-shadow:
+        0 0 20px #7b20ff,
+        inset 0 0 30px rgba(150,40,255,.5);
+    position:relative;
+    animation:loaderSpin 4s linear infinite;
+}
+
+.loader-core::before,
+.loader-core::after {
+    content:"";
+    position:absolute;
+    inset:15px;
+    border-radius:50%;
+    border:1px solid #a33cff;
+}
+
+.loader-core::after {
+    inset:30px;
+    border-color:#26a8ff;
+}
+
+.loader-text {
+    margin-top:30px;
+    letter-spacing:7px;
+    font-family:var(--font-head);
+    font-size:10px;
+    color:#c78bff;
+}
+
+@keyframes loaderSpin {
+    to { transform:rotate(360deg); }
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.nav {
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1200px,calc(100% - 30px));
+    height:68px;
+    z-index:5000;
+    border:1px solid rgba(185,100,255,.2);
+    background:rgba(5,2,13,.62);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    box-shadow:
+        0 20px 70px rgba(0,0,0,.35),
+        inset 0 1px rgba(255,255,255,.05);
+}
+
+.brand {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-logo {
+    width:42px;
+    height:42px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:12px;
+    filter:drop-shadow(0 0 12px #8c27ff);
+}
+
+.brand-name {
+    font-family:var(--font-head);
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.nav-links {
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a {
+    color:#aaa0bd;
+    font-size:12px;
+    letter-spacing:1.5px;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-links a:hover {
+    color:white;
+    text-shadow:0 0 15px #a72fff;
+}
+
+.nav-links a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:1px;
+    background:linear-gradient(90deg,#6d21ff,#d55cff);
+    box-shadow:0 0 10px #9c2cff;
+    transition:.35s;
+}
+
+.nav-links a:hover::after {
+    width:100%;
+}
+
+.nav-cta {
+    border:1px solid rgba(177,80,255,.45);
+    padding:11px 17px;
+    border-radius:13px;
+    font-size:11px;
+    letter-spacing:1px;
+    background:linear-gradient(
+        135deg,
+        rgba(128,30,255,.2),
+        rgba(26,118,255,.12)
+    );
+    box-shadow:0 0 20px rgba(125,28,255,.12);
+}
+
+.menu {
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:25px;
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+section {
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.container {
+    width:min(1200px,calc(100% - 40px));
+    margin:auto;
+    position:relative;
+    z-index:5;
+}
+
+.section-label {
+    font-family:var(--font-head);
+    color:#a64aff;
+    font-size:10px;
+    letter-spacing:5px;
+    margin-bottom:18px;
+}
+
+.section-title {
+    font-family:var(--font-head);
+    font-size:clamp(34px,5vw,72px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
+
+.gradient {
+    background:linear-gradient(
+        100deg,
+        #fff,
+        #bb86ff 40%,
+        #7f2cff 70%,
+        #36bfff
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+    background-clip:text;
+}
+
+.section-copy {
+    color:var(--muted);
+    max-width:620px;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* =========================================================
+   3D WORLD
+   ========================================================= */
+
+#world {
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+}
+
+#threeCanvas {
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+.world-vignette {
+    position:fixed;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 30%,
+            rgba(0,0,0,.5) 100%
+        );
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    padding-top:100px;
+}
+
+.hero::before {
+    content:"";
+    position:absolute;
+    width:800px;
+    height:800px;
+    left:50%;
+    top:35%;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(128,35,255,.23),
+            rgba(36,76,255,.06) 35%,
+            transparent 70%
+        );
+    filter:blur(20px);
+}
+
+.hero-grid {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:260px;
+    background:
+        linear-gradient(
+            rgba(116,36,255,.2) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(116,36,255,.15) 1px,
+            transparent 1px
+        );
+    background-size:55px 55px;
+    transform:
+        perspective(500px)
+        rotateX(65deg)
+        scale(1.5);
+    transform-origin:bottom;
+    opacity:.4;
+    mask-image:linear-gradient(to top,black,transparent);
+}
+
+.hero-content {
+    position:relative;
+    z-index:10;
+    max-width:750px;
+    padding-top:40px;
+}
+
+.eyebrow {
+    display:inline-flex;
+    gap:12px;
+    align-items:center;
+    padding:9px 14px;
+    border:1px solid rgba(173,76,255,.3);
+    border-radius:999px;
+    background:rgba(120,35,255,.07);
+    backdrop-filter:blur(10px);
+    color:#c795ff;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:28px;
+}
+
+.eyebrow-dot {
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#9d35ff;
+    box-shadow:0 0 15px #a530ff;
+    animation:pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+    50% { transform:scale(1.7); opacity:.4; }
+}
+
+.hero h1 {
+    font-family:var(--font-head);
+    font-size:clamp(50px,8vw,112px);
+    line-height:.91;
+    letter-spacing:-5px;
+    margin-bottom:30px;
+}
+
+.hero h1 .outline {
+    color:transparent;
+    -webkit-text-stroke:1px rgba(208,169,255,.65);
+}
+
+.hero-description {
+    max-width:610px;
+    color:#aaa2b8;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:36px;
+}
+
+.hero-actions {
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn {
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-width:165px;
+    padding:16px 22px;
+    border-radius:15px;
+    border:1px solid rgba(178,80,255,.4);
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.btn::before {
+    content:"";
+    position:absolute;
+    inset:-50%;
+    background:linear-gradient(
+        110deg,
+        transparent 35%,
+        rgba(255,255,255,.25),
+        transparent 65%
+    );
+    transform:translateX(-100%) rotate(10deg);
+    transition:.7s;
+}
+
+.btn:hover::before {
+    transform:translateX(100%) rotate(10deg);
+}
+
+.btn-primary {
+    background:
+        linear-gradient(
+            110deg,
+            rgba(117,25,255,.8),
+            rgba(38,130,255,.55)
+        );
+    box-shadow:
+        0 0 30px rgba(128,36,255,.25),
+        inset 0 1px rgba(255,255,255,.25);
+}
+
+.btn-secondary {
+    background:rgba(255,255,255,.035);
+    color:#bfb5cc;
+}
+
+.btn:hover {
+    transform:translateY(-4px);
+    box-shadow:0 15px 40px rgba(111,29,255,.22);
+}
+
+.hero-scroll {
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:8px;
+    letter-spacing:4px;
+    color:#766d84;
+    z-index:10;
+}
+
+.hero-scroll::after {
+    content:"";
+    display:block;
+    width:1px;
+    height:50px;
+    background:linear-gradient(#9a31ff,transparent);
+    margin:12px auto 0;
+}
+
+/* =========================================================
+   CHIP UNIVERSE
+   ========================================================= */
+
+.chip-section {
+    padding:150px 0;
+    min-height:130vh;
+}
+
+.chip-layout {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.chip-stage {
+    height:650px;
+    position:relative;
+    perspective:1300px;
+}
+
+.chip {
+    width:360px;
+    height:360px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:
+        translate(-50%,-50%)
+        rotateX(58deg)
+        rotateZ(-28deg);
+    transform-style:preserve-3d;
+    animation:chipFloat 7s ease-in-out infinite;
+}
+
+.chip-top {
+    position:absolute;
+    inset:30px;
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(154,52,255,.4),
+            transparent 32%
+        ),
+        linear-gradient(135deg,#17101f,#050307);
+    border:1px solid #8c38ff;
+    box-shadow:
+        0 0 40px rgba(136,38,255,.45),
+        inset 0 0 50px rgba(113,27,255,.1);
+    transform:translateZ(30px);
+}
+
+.chip-top::before {
+    content:"OWLSOME";
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-family:var(--font-head);
+    font-size:23px;
+    letter-spacing:4px;
+    color:#b46aff;
+    text-shadow:0 0 20px #8f28ff;
+}
+
+.chip-ring {
+    position:absolute;
+    inset:85px;
+    border:1px solid #2e8fff;
+    border-radius:50%;
+    box-shadow:
+        0 0 20px #267cff,
+        inset 0 0 20px rgba(34,126,255,.5);
+    transform:translateZ(45px);
+}
+
+.chip-ring.two {
+    inset:110px;
+    border-color:#a532ff;
+    box-shadow:0 0 25px #a52cff;
+    animation:ringSpin 6s linear infinite;
+}
+
+@keyframes ringSpin {
+    to { transform:translateZ(45px) rotateZ(360deg); }
+}
+
+.chip-pin {
+    position:absolute;
+    background:linear-gradient(#b45cff,#287eff);
+    box-shadow:0 0 10px rgba(125,51,255,.7);
+    transform:translateZ(10px);
+}
+
+.pin-top,
+.pin-bottom {
+    width:25px;
+    height:60px;
+}
+
+.pin-left,
+.pin-right {
+    width:60px;
+    height:25px;
+}
+
+.pin-top {
+    top:-35px;
+}
+
+.pin-bottom {
+    bottom:-35px;
+}
+
+.pin-left {
+    left:-35px;
+}
+
+.pin-right {
+    right:-35px;
+}
+
+@keyframes chipFloat {
+    0%,100% {
+        transform:
+            translate(-50%,-50%)
+            rotateX(58deg)
+            rotateZ(-28deg)
+            translateZ(0);
+    }
+    50% {
+        transform:
+            translate(-50%,-50%)
+            rotateX(58deg)
+            rotateZ(-24deg)
+            translateZ(45px);
+    }
+}
+
+.circuit-lines {
+    position:absolute;
+    inset:0;
+}
+
+.circuit-lines span {
+    position:absolute;
+    height:1px;
+    background:linear-gradient(90deg,transparent,#8e2fff,#27baff,transparent);
+    box-shadow:0 0 10px #7c2fff;
+    animation:circuitMove 3s linear infinite;
+}
+
+.circuit-lines span:nth-child(1) {
+    width:70%;
+    top:35%;
+    left:5%;
+}
+
+.circuit-lines span:nth-child(2) {
+    width:60%;
+    top:60%;
+    right:0;
+    animation-delay:1s;
+}
+
+.circuit-lines span:nth-child(3) {
+    width:50%;
+    top:48%;
+    left:30%;
+    animation-delay:2s;
+}
+
+@keyframes circuitMove {
+    0% { opacity:0; transform:scaleX(.3); }
+    50% { opacity:1; }
+    100% { opacity:0; transform:scaleX(1); }
+}
+
+/* =========================================================
+   TECHNOLOGY CARDS
+   ========================================================= */
+
+.tech-section {
+    padding:160px 0;
+}
+
+.center-heading {
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 80px;
+}
+
+.tech-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.tech-card {
+    min-height:320px;
+    padding:35px;
+    border:1px solid rgba(171,79,255,.17);
+    border-radius:26px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(133,31,255,.08),
+            rgba(10,8,18,.5)
+        );
+    backdrop-filter:blur(18px);
+    position:relative;
+    overflow:hidden;
+    transform-style:preserve-3d;
+    transition:.5s cubic-bezier(.2,.8,.2,1);
+}
+
+.tech-card:hover {
+    transform:
+        perspective(900px)
+        rotateX(5deg)
+        rotateY(-5deg)
+        translateY(-12px)
+        translateZ(20px);
+    border-color:rgba(185,81,255,.55);
+    box-shadow:
+        0 30px 80px rgba(79,17,140,.25),
+        inset 0 0 50px rgba(133,31,255,.06);
+}
+
+.tech-card::before {
+    content:"";
+    position:absolute;
+    width:160px;
+    height:160px;
+    right:-70px;
+    top:-70px;
+    border-radius:50%;
+    background:#8e28ff;
+    filter:blur(80px);
+    opacity:.22;
+}
+
+.tech-number {
+    font-family:var(--font-head);
+    font-size:11px;
+    color:#7532ff;
+    letter-spacing:3px;
+}
+
+.tech-icon {
+    font-size:48px;
+    margin:35px 0 25px;
+    filter:drop-shadow(0 0 18px #7d2cff);
+}
+
+.tech-card h3 {
+    font-family:var(--font-head);
+    font-size:18px;
+    margin-bottom:14px;
+}
+
+.tech-card p {
+    color:#91879f;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* =========================================================
+   DEEP DIVE
+   ========================================================= */
+
+.deep-section {
+    min-height:150vh;
+    padding:160px 0;
+}
+
+.deep-orbit {
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    border:1px solid rgba(141,48,255,.2);
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform:translate(-50%,-50%);
+    box-shadow:
+        0 0 80px rgba(111,28,255,.08),
+        inset 0 0 80px rgba(32,114,255,.05);
+}
+
+.deep-orbit::before,
+.deep-orbit::after {
+    content:"";
+    position:absolute;
+    inset:70px;
+    border-radius:50%;
+    border:1px dashed rgba(53,151,255,.22);
+    animation:orbitSpin 18s linear infinite;
+}
+
+.deep-orbit::after {
+    inset:140px;
+    border-color:rgba(181,57,255,.3);
+    animation-direction:reverse;
+    animation-duration:12s;
+}
+
+@keyframes orbitSpin {
+    to { transform:rotate(360deg); }
+}
+
+.core {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:150px;
+    height:150px;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:
+        radial-gradient(circle,
+            #e8d5ff 0 3%,
+            #9f38ff 7%,
+            #5113a6 25%,
+            #09020f 68%
+        );
+    box-shadow:
+        0 0 40px #a331ff,
+        0 0 100px rgba(94,34,255,.5);
+    animation:corePulse 3s ease-in-out infinite;
+}
+
+@keyframes corePulse {
+    50% {
+        transform:translate(-50%,-50%) scale(1.12);
+        box-shadow:
+            0 0 70px #b83bff,
+            0 0 150px rgba(94,34,255,.7);
+    }
+}
+
+.deep-copy {
+    position:relative;
+    z-index:10;
+    padding-top:40px;
+}
+
+.deep-copy h2 {
+    max-width:700px;
+}
+
+.deep-list {
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:800px;
+}
+
+.deep-item {
+    padding:22px;
+    border-left:1px solid #7628ff;
+    background:linear-gradient(90deg,rgba(125,38,255,.08),transparent);
+}
+
+.deep-item strong {
+    display:block;
+    font-family:var(--font-head);
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.deep-item span {
+    color:#8d8497;
+    font-size:13px;
+}
+
+/* =========================================================
+   FOUNDER
+   ========================================================= */
+
+.founder {
+    padding:160px 0;
+    min-height:100vh;
+}
+
+.founder-grid {
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.founder-photo-wrap {
+    position:relative;
+    perspective:1000px;
+}
+
+.founder-photo-card {
+    position:relative;
+    transform:
+        rotateY(8deg)
+        rotateX(3deg);
+    transform-style:preserve-3d;
+    border-radius:35px;
+    padding:10px;
+    background:
+        linear-gradient(
+            135deg,
+            #7621ff,
+            #10101b 35%,
+            #258dff 100%
+        );
+    box-shadow:
+        0 40px 100px rgba(69,15,135,.35),
+        0 0 50px rgba(115,30,255,.15);
+}
+
+.founder-photo {
+    width:100%;
+    display:block;
+    border-radius:28px;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center top;
+    filter:saturate(.9) contrast(1.05);
+}
+
+.photo-glow {
+    position:absolute;
+    inset:-40px;
+    z-index:-1;
+    background:radial-gradient(circle,#7c2aff,transparent 65%);
+    filter:blur(50px);
+    opacity:.3;
+}
+
+.founder-info h2 {
+    font-family:var(--font-head);
+    font-size:clamp(40px,5vw,70px);
+    margin-bottom:12px;
+}
+
+.founder-role {
+    color:#b04dff;
+    letter-spacing:4px;
+    font-size:11px;
+    font-family:var(--font-head);
+    margin-bottom:30px;
+}
+
+.founder-info p {
+    color:#968da0;
+    line-height:1.9;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+.founder-signature {
+    margin-top:35px;
+    font-family:'Brush Script MT',cursive;
+    font-size:32px;
+    color:#c987ff;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    padding:160px 0 120px;
+}
+
+.contact-shell {
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:50px;
+    padding:45px;
+    border:1px solid rgba(171,73,255,.2);
+    border-radius:35px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(117,35,255,.11),transparent 35%),
+        rgba(10,6,18,.6);
+    backdrop-filter:blur(25px);
+    box-shadow:0 40px 120px rgba(0,0,0,.35);
+}
+
+.contact-copy h2 {
+    font-family:var(--font-head);
+    font-size:clamp(35px,4vw,58px);
+    margin-bottom:25px;
+}
+
+.contact-copy p {
+    color:#8f8798;
+    line-height:1.8;
+}
+
+.email-display {
+    display:inline-block;
+    margin-top:35px;
+    color:#c48aff;
+    font-family:var(--font-head);
+    font-size:11px;
+    letter-spacing:1px;
+    word-break:break-all;
+}
+
+.contact-form {
+    display:grid;
+    gap:15px;
+}
+
+.field {
+    position:relative;
+}
+
+.field input,
+.field textarea {
+    width:100%;
+    border:1px solid rgba(174,79,255,.2);
+    outline:none;
+    background:rgba(0,0,0,.28);
+    color:white;
+    padding:17px 18px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.field textarea {
+    min-height:170px;
+    resize:vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color:#9b39ff;
+    box-shadow:
+        0 0 0 3px rgba(141,36,255,.08),
+        0 0 30px rgba(141,36,255,.1);
+}
+
+.form-status {
+    min-height:20px;
+    color:#b87aff;
+    font-size:12px;
+}
+
+.form-submit {
+    cursor:pointer;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    border-top:1px solid rgba(159,66,255,.12);
+    padding:40px 0;
+    color:#645c6e;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+.footer-brand {
+    font-family:var(--font-head);
+    color:#a78fb8;
+    font-size:12px;
+    letter-spacing:3px;
+}
+
+.footer-copy {
+    font-size:11px;
+}
+
+/* =========================================================
+   REVEALS
+   ========================================================= */
+
+.reveal {
+    opacity:0;
+    transform:translateY(50px);
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.visible {
+    opacity:1;
+    transform:none;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        display:none;
+        position:absolute;
+        left:10px;
+        right:10px;
+        top:75px;
+        padding:20px;
+        flex-direction:column;
+        align-items:stretch;
+        background:rgba(5,2,13,.95);
+        border:1px solid rgba(175,75,255,.2);
+        border-radius:20px;
+    }
+
+    .nav-links.open {
+        display:flex;
+    }
+
+    .nav-links a {
+        padding:13px;
+    }
+
+    .nav-cta {
+        display:none;
+    }
+
+    .menu {
+        display:block;
+    }
+
+    .hero-content {
+        text-align:center;
+        margin:auto;
+    }
+
+    .hero-description {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-actions {
+        justify-content:center;
+    }
+
+    .chip-layout,
+    .founder-grid,
+    .contact-shell {
+        grid-template-columns:1fr;
+    }
+
+    .chip-stage {
+        height:500px;
+        order:2;
+    }
+
+    .chip {
+        transform:
+            translate(-50%,-50%)
+            scale(.75)
+            rotateX(58deg)
+            rotateZ(-28deg);
+    }
+
+    .tech-grid {
+        grid-template-columns:1fr;
+    }
+
+    .deep-orbit {
+        width:450px;
+        height:450px;
+    }
+
+    .deep-list {
+        grid-template-columns:1fr;
+    }
+
+    .founder-photo-card {
+        max-width:500px;
+        margin:auto;
+    }
+
+    .footer-inner {
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px) {
+
+    .container {
+        width:min(100% - 26px,1200px);
+    }
+
+    .nav {
+        width:calc(100% - 20px);
+    }
+
+    .brand-name {
+        font-size:9px;
+    }
+
+    .hero h1 {
+        font-size:47px;
+        letter-spacing:-3px;
+    }
+
+    .hero-description {
+        font-size:14px;
+    }
+
+    .chip-stage {
+        height:400px;
+    }
+
+    .chip {
+        transform:
+            translate(-50%,-50%)
+            scale(.55)
+            rotateX(58deg)
+            rotateZ(-28deg);
+    }
+
+    .deep-orbit {
+        width:330px;
+        height:330px;
+    }
+
+    .core {
+        width:90px;
+        height:90px;
+    }
+
+    .contact-shell {
+        padding:24px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     LOADER
+     ========================================================= -->
+
+<div id="loader">
+    <div class="loader-core"></div>
+    <div class="loader-text">INITIALIZING OWLSOME CORE</div>
+</div>
+
+<!-- =========================================================
+     3D BACKGROUND
+     ========================================================= -->
+
+<div id="world">
+    <canvas id="threeCanvas"></canvas>
+</div>
+
+<div class="world-vignette"></div>
+
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+
+<header class="nav">
+
+    <a href="#home" class="brand">
+
+        <img
+            src="1000004628.png"
+            class="brand-logo"
+            alt="Owlsome Technologies logo"
+        >
+
+        <span class="brand-name">
+            OWLSOME TECHNOLOGIES
+        </span>
+
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#home">HOME</a>
+        <a href="#technology">TECHNOLOGY</a>
+        <a href="#ecosystem">ECOSYSTEM</a>
+        <a href="#founder">FOUNDER</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">
+        CONNECT
+    </a>
+
+    <button class="menu" id="menuBtn" aria-label="Open navigation">
+        ☰
+    </button>
+
+</header>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-grid"></div>
+
+    <div class="container">
+
+        <div class="hero-content reveal">
+
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                NEXT-GENERATION SEMICONDUCTOR ENGINEERING
+            </div>
+
+            <h1>
+                <span>INTELLIGENCE</span>
+                <br>
+                <span class="gradient">ENGINEERED.</span>
+            </h1>
+
+            <p class="hero-description">
+                Owlsome Technologies explores the future of semiconductor
+                engineering, integrated circuits, processors, sensors,
+                silicon architecture and intelligent computing hardware.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#technology" class="btn btn-primary">
+                    Explore Technology →
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Founder
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        SCROLL TO ENTER THE CHIP
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CHIP ARCHITECTURE
+     ========================================================= -->
+
+<section class="chip-section" id="technology">
+
+    <div class="container chip-layout">
+
+        <div class="chip-stage reveal">
+
+            <div class="circuit-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="chip">
+
+                <div class="chip-top"></div>
+
+                <div class="chip-ring"></div>
+                <div class="chip-ring two"></div>
+
+                <div class="chip-pin pin-top"></div>
+                <div class="chip-pin pin-bottom"></div>
+                <div class="chip-pin pin-left"></div>
+                <div class="chip-pin pin-right"></div>
+
+            </div>
+
+        </div>
+
+        <div class="reveal">
+
+            <div class="section-label">
+                01 / CHIP ARCHITECTURE
+            </div>
+
+            <h2 class="section-title">
+                Enter the
+                <span class="gradient">silicon layer.</span>
+            </h2>
+
+            <p class="section-copy">
+                Every intelligent system begins with a foundation of
+                computation. Owlsome Technologies is envisioned around
+                advanced semiconductor architecture, integrated circuits,
+                processing systems, sensors and specialized computing
+                hardware.
+            </p>
+
+            <br>
+
+            <p class="section-copy">
+                From microscopic transistor-level structures to
+                high-performance intelligent systems, the goal is to
+                engineer technology that makes computation faster,
+                smarter and more capable.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     TECHNOLOGY ECOSYSTEM
+     ========================================================= -->
+
+<section class="tech-section" id="ecosystem">
+
+    <div class="container">
+
+        <div class="center-heading reveal">
+
+            <div class="section-label">
+                02 / SEMICONDUCTOR ECOSYSTEM
+            </div>
+
+            <h2 class="section-title">
+                One ecosystem.
+                <br>
+                <span class="gradient">Infinite computation.</span>
+            </h2>
+
+            <p class="section-copy" style="margin:auto">
+                Explore the technological domains surrounding the
+                Owlsome vision — from silicon and integrated circuits
+                to AI hardware and next-generation computing.
+            </p>
+
+        </div>
+
+        <div class="tech-grid">
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">01</div>
+
+                <div class="tech-icon">◈</div>
+
+                <h3>SEMICONDUCTORS</h3>
+
+                <p>
+                    Semiconductor technology forms the foundation of
+                    modern computing, electronics and intelligent
+                    machines.
+                </p>
+
+            </article>
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">02</div>
+
+                <div class="tech-icon">⬡</div>
+
+                <h3>INTEGRATED CIRCUITS</h3>
+
+                <p>
+                    Highly integrated electronic systems bringing
+                    computation, control and intelligence onto silicon.
+                </p>
+
+            </article>
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">03</div>
+
+                <div class="tech-icon">◉</div>
+
+                <h3>PROCESSORS</h3>
+
+                <p>
+                    Architecture focused on efficient, scalable and
+                    intelligent computation for future systems.
+                </p>
+
+            </article>
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">04</div>
+
+                <div class="tech-icon">⌁</div>
+
+                <h3>AI HARDWARE</h3>
+
+                <p>
+                    Hardware designed around the computational demands
+                    of artificial intelligence and machine learning.
+                </p>
+
+            </article>
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">05</div>
+
+                <div class="tech-icon">◎</div>
+
+                <h3>SENSORS</h3>
+
+                <p>
+                    Intelligent sensing systems connecting the physical
+                    world with digital computation.
+                </p>
+
+            </article>
+
+            <article class="tech-card reveal">
+
+                <div class="tech-number">06</div>
+
+                <div class="tech-icon">✦</div>
+
+                <h3>NEXT-GEN COMPUTING</h3>
+
+                <p>
+                    Exploring new approaches to computation, embedded
+                    systems and intelligent hardware.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     DEEP CORE
+     ========================================================= -->
+
+<section class="deep-section">
+
+    <div class="deep-orbit">
+
+        <div class="core"></div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="deep-copy reveal">
+
+            <div class="section-label">
+                03 / THE COMPUTATIONAL CORE
+            </div>
+
+            <h2 class="section-title">
+                Go deeper.
+                <br>
+                <span class="gradient">Build intelligence.</span>
+            </h2>
+
+            <p class="section-copy">
+                The future of technology is increasingly defined by the
+                hardware underneath it. Owlsome's vision is centered on
+                exploring the layers between silicon, electronics,
+                computation and intelligent systems.
+            </p>
+
+            <div class="deep-list">
+
+                <div class="deep-item">
+                    <strong>SILICON</strong>
+                    <span>Material foundations for modern electronics.</span>
+                </div>
+
+                <div class="deep-item">
+                    <strong>LOGIC</strong>
+                    <span>Digital structures that transform information.</span>
+                </div>
+
+                <div class="deep-item">
+                    <strong>COMPUTE</strong>
+                    <span>Processing architectures built for demanding workloads.</span>
+                </div>
+
+                <div class="deep-item">
+                    <strong>INTELLIGENCE</strong>
+                    <span>Hardware designed to support intelligent systems.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOUNDER
+     ========================================================= -->
+
+<section class="founder" id="founder">
+
+    <div class="container founder-grid">
+
+        <div class="founder-photo-wrap reveal">
+
+            <div class="photo-glow"></div>
+
+            <div class="founder-photo-card">
+
+                <img
+                    src="1000001796.png"
+                    class="founder-photo"
+                    alt="Gaurav Singh — Founder and CEO of Owlsome Technologies"
+                >
+
+            </div>
+
+        </div>
+
+        <div class="founder-info reveal">
+
+            <div class="section-label">
+                04 / LEADERSHIP
+            </div>
+
+            <h2>
+                Gaurav
+                <span class="gradient">Singh.</span>
+            </h2>
+
+            <div class="founder-role">
+                FOUNDER &amp; CHIEF EXECUTIVE OFFICER
+            </div>
+
+            <p>
+                Gaurav Singh is the Founder and CEO of Owlsome Technologies,
+                leading the vision behind the company's exploration of
+                semiconductor technology, intelligent hardware and
+                next-generation computing.
+            </p>
+
+            <p>
+                Owlsome Technologies is built around a long-term vision:
+                bringing together engineering, computation and artificial
+                intelligence to explore what the next generation of
+                hardware can become.
+            </p>
+
+            <p>
+                The philosophy is simple:
+                <strong>
+                    intelligence should be engineered from the foundation up.
+                </strong>
+            </p>
+
+            <div class="founder-signature">
+                Gaurav Singh
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-shell reveal">
+
+            <div class="contact-copy">
+
+                <div class="section-label">
+                    05 / CONNECT
+                </div>
+
+                <h2>
+                    Let's build
+                    <span class="gradient">what's next.</span>
+                </h2>
+
+                <p>
+                    Have an idea, collaboration, technology discussion or
+                    opportunity? Send a message directly to the Owlsome
+                    Technologies founder.
+                </p>
+
+                <a
+                    class="email-display"
+                    href="mailto:gauravbtprj05@gmail.com"
+                >
+                    gauravbtprj05@gmail.com
+                </a>
+
+            </div>
+
+            <form
+                class="contact-form"
+                id="contactForm"
+            >
+
+                <div class="field">
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div
+                    class="form-status"
+                    id="formStatus"
+                ></div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit"
+                >
+                    SEND MESSAGE →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+            OWLSOME TECHNOLOGIES
+        </div>
+
+        <div class="footer-copy">
+            © 2026 Owlsome Technologies. Intelligence, Engineered.
+        </div>
+
+        <div class="footer-copy">
+            SEMICONDUCTORS • COMPUTE • AI HARDWARE
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     THREE.JS
+     ========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        document
+            .getElementById("loader")
+            .classList.add("hide");
+    }, 900);
+
+});
+
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
+});
+
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+
+        });
+
+    },
+    {
+        threshold:.12
+    }
+);
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(el => observer.observe(el));
+
+
+/* =========================================================
+   3D CHIP UNIVERSE
+   ========================================================= */
+
+const canvas = document.getElementById("threeCanvas");
+
+const scene = new THREE.Scene();
+
+scene.fog = new THREE.FogExp2(
+    0x05010d,
+    0.035
+);
+
+const camera = new THREE.PerspectiveCamera(
+    65,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+
+camera.position.set(0,0,10);
+
+const renderer = new THREE.WebGLRenderer({
+    canvas,
+    antialias:true,
+    alpha:true,
+    powerPreference:"high-performance"
+});
+
+renderer.setPixelRatio(
+    Math.min(window.devicePixelRatio,2)
+);
+
+renderer.setSize(
+    window.innerWidth,
+    window.innerHeight
+);
+
+
+/* =========================================================
+   LIGHTS
+   ========================================================= */
+
+const ambient = new THREE.AmbientLight(
+    0x552080,
+    0.7
+);
+
+scene.add(ambient);
+
+const purpleLight = new THREE.PointLight(
+    0x9c2cff,
+    8,
+    35
+);
+
+purpleLight.position.set(
+    4,
+    3,
+    7
+);
+
+scene.add(purpleLight);
+
+const blueLight = new THREE.PointLight(
+    0x167dff,
+    7,
+    30
+);
+
+blueLight.position.set(
+    -5,
+    -2,
+    4
+);
+
+scene.add(blueLight);
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+const particleCount =
+    window.innerWidth < 700 ? 900 : 1800;
+
+const particleGeometry =
+    new THREE.BufferGeometry();
+
+const particlePositions =
+    new Float32Array(particleCount * 3);
+
+const particleSizes =
+    new Float32Array(particleCount);
+
+for(let i=0;i<particleCount;i++){
+
+    const i3 = i * 3;
+
+    particlePositions[i3] =
+        (Math.random() - .5) * 35;
+
+    particlePositions[i3 + 1] =
+        (Math.random() - .5) * 25;
+
+    particlePositions[i3 + 2] =
+        (Math.random() - .5) * 40;
+
+    particleSizes[i] =
+        Math.random() * 2 + .3;
+}
+
+particleGeometry.setAttribute(
+    "position",
+    new THREE.BufferAttribute(
+        particlePositions,
+        3
+    )
+);
+
+particleGeometry.setAttribute(
+    "size",
+    new THREE.BufferAttribute(
+        particleSizes,
+        1
+    )
+);
+
+const particleMaterial =
+    new THREE.PointsMaterial({
+        color:0x9d48ff,
+        size:.035,
+        transparent:true,
+        opacity:.75,
+        blending:THREE.AdditiveBlending,
+        depthWrite:false
+    });
+
+const particles =
+    new THREE.Points(
+        particleGeometry,
+        particleMaterial
+    );
+
+scene.add(particles);
+
+
+/* =========================================================
+   FLOATING CHIP OBJECTS
+   ========================================================= */
+
+const chips = [];
+
+function createChip(
+    x,
+    y,
+    z,
+    scale
+){
+
+    const group =
+        new THREE.Group();
+
+    const bodyGeometry =
+        new THREE.BoxGeometry(
+            2.4,
+            .35,
+            2.4
+        );
+
+    const bodyMaterial =
+        new THREE.MeshStandardMaterial({
+            color:0x100b18,
+            metalness:.9,
+            roughness:.28,
+            emissive:0x25053c,
+            emissiveIntensity:.5
+        });
+
+    const body =
+        new THREE.Mesh(
+            bodyGeometry,
+            bodyMaterial
+        );
+
+    group.add(body);
+
+    const coreGeometry =
+        new THREE.BoxGeometry(
+            1.25,
+            .12,
+            1.25
+        );
+
+    const coreMaterial =
+        new THREE.MeshStandardMaterial({
+            color:0x37105f,
+            metalness:.8,
+            roughness:.2,
+            emissive:0x8c24ff,
+            emissiveIntensity:1.4
+        });
+
+    const core =
+        new THREE.Mesh(
+            coreGeometry,
+            coreMaterial
+        );
+
+    core.position.y=.25;
+
+    group.add(core);
+
+    const lineMaterial =
+        new THREE.MeshBasicMaterial({
+            color:0x9635ff
+        });
+
+    for(let i=-3;i<=3;i++){
+
+        const line =
+            new THREE.Mesh(
+                new THREE.BoxGeometry(
+                    .025,
+                    .02,
+                    2.7
+                ),
+                lineMaterial
+            );
+
+        line.position.set(
+            i*.32,
+            .23,
+            0
+        );
+
+        group.add(line);
+    }
+
+    group.position.set(x,y,z);
+
+    group.scale.setScalar(scale);
+
+    group.rotation.set(
+        Math.random(),
+        Math.random(),
+        Math.random()
+    );
+
+    scene.add(group);
+
+    chips.push({
+        mesh:group,
+        speed:.001 + Math.random()*.002,
+        phase:Math.random()*Math.PI*2
+    });
+}
+
+createChip(-6,3,-7,.8);
+createChip(6,-2,-11,.65);
+createChip(-5,-4,-15,.55);
+createChip(5,4,-20,.45);
+createChip(0,2,-27,.7);
+createChip(-8,0,-30,.4);
+createChip(8,2,-35,.5);
+
+
+/* =========================================================
+   ORBITAL RINGS
+   ========================================================= */
+
+const orbitalGroup =
+    new THREE.Group();
+
+for(let i=0;i<5;i++){
+
+    const geometry =
+        new THREE.TorusGeometry(
+            2.5 + i*.65,
+            .008 + i*.002,
+            8,
+            160
+        );
+
+    const material =
+        new THREE.MeshBasicMaterial({
+            color:
+                i % 2 === 0
+                ? 0x8d2dff
+                : 0x168dff,
+            transparent:true,
+            opacity:.45
+        });
+
+    const ring =
+        new THREE.Mesh(
+            geometry,
+            material
+        );
+
+    ring.rotation.x =
+        Math.PI / 2 +
+        i*.12;
+
+    ring.rotation.z =
+        i*.25;
+
+    orbitalGroup.add(ring);
+}
+
+orbitalGroup.position.set(
+    0,
+    0,
+    -15
+);
+
+scene.add(orbitalGroup);
+
+
+/* =========================================================
+   MOUSE
+   ========================================================= */
+
+let mouseX = 0;
+let mouseY = 0;
+
+window.addEventListener(
+    "mousemove",
+    e => {
+
+        mouseX =
+            (e.clientX / window.innerWidth - .5);
+
+        mouseY =
+            (e.clientY / window.innerHeight - .5);
+
+    }
+);
+
+
+/* =========================================================
+   SCROLL CAMERA
+   ========================================================= */
+
+let scrollProgress = 0;
+let targetCameraZ = 10;
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        const max =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        scrollProgress =
+            window.scrollY / Math.max(max,1);
+
+        targetCameraZ =
+            10 - scrollProgress * 28;
+
+    },
+    {passive:true}
+);
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+const clock = new THREE.Clock();
+
+function animate(){
+
+    requestAnimationFrame(animate);
+
+    const time =
+        clock.getElapsedTime();
+
+    /* particles */
+
+    particles.rotation.y =
+        time * .012;
+
+    particles.rotation.x =
+        Math.sin(time*.08)*.04;
+
+    /* orbital system */
+
+    orbitalGroup.rotation.y =
+        time*.12;
+
+    orbitalGroup.rotation.x =
+        Math.sin(time*.3)*.15;
+
+    /* floating chips */
+
+    chips.forEach((chip,i)=>{
+
+        chip.mesh.rotation.x +=
+            chip.speed;
+
+        chip.mesh.rotation.y +=
+            chip.speed * 1.4;
+
+        chip.mesh.position.y +=
+            Math.sin(
+                time*.7 +
+                chip.phase
+            ) * .0015;
+
+    });
+
+    /* lights */
+
+    purpleLight.position.x =
+        Math.sin(time*.5)*6;
+
+    purpleLight.position.y =
+        Math.cos(time*.4)*4;
+
+    blueLight.position.x =
+        Math.cos(time*.35)*7;
+
+    /* camera */
+
+    camera.position.z +=
+        (targetCameraZ -
+        camera.position.z) * .035;
+
+    camera.position.x +=
+        (
+            mouseX * 1.4 -
+            camera.position.x
+        ) * .035;
+
+    camera.position.y +=
+        (
+            -mouseY * 1.0 -
+            camera.position.y
+        ) * .035;
+
+    camera.lookAt(
+        0,
+        0,
+        camera.position.z - 14
+    );
+
+    renderer.render(
+        scene,
+        camera
+    );
+}
+
+animate();
+
+
+/* =========================================================
+   RESIZE
+   ========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        camera.aspect =
+            window.innerWidth /
+            window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+            window.innerWidth,
+            window.innerHeight
+        );
+
+        renderer.setPixelRatio(
+            Math.min(
+                window.devicePixelRatio,
+                2
+            )
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CONTACT FORM
+   =========================================================
+
+   This uses the visitor's email client.
+   For true background submission, replace the
+   MAILTO address with a server/form endpoint.
+   ========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const formStatus =
+    document.getElementById("formStatus");
+
+contactForm.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const subject =
+            document.getElementById("subject").value.trim();
+
+        const message =
+            document.getElementById("message").value.trim();
+
+        if(!name || !email || !subject || !message){
+
+            formStatus.textContent =
+                "Please complete every field.";
+
+            return;
+        }
+
+        const emailSubject =
+            encodeURIComponent(
+                "OWLSOME TECHNOLOGIES — " +
+                subject
+            );
+
+        const emailBody =
+            encodeURIComponent(
+`Hello Gaurav,
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+Sent through the Owlsome Technologies website.`
+            );
+
+        formStatus.textContent =
+            "Opening secure email composer...";
+
+        window.location.href =
+            `mailto:gauravbtprj05@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+    }
+);
+
+
+/* =========================================================
+   3D CARD TILT
+   ========================================================= */
+
+document
+    .querySelectorAll(".tech-card")
+    .forEach(card => {
+
+        card.addEventListener(
+            "mousemove",
+            e => {
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    e.clientX - rect.left;
+
+                const y =
+                    e.clientY - rect.top;
+
+                const rotateY =
+                    ((x / rect.width) - .5) * 10;
+
+                const rotateX =
+                    ((y / rect.height) - .5) * -10;
+
+                card.style.transform =
+                    `perspective(900px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateY(-10px)
+                     translateZ(20px)`;
+
+            }
+        );
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform = "";
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   FOUNDER 3D PHOTO TILT
+   ========================================================= */
+
+const founderCard =
+    document.querySelector(".founder-photo-card");
+
+if(founderCard){
+
+    founderCard.addEventListener(
+        "mousemove",
+        e => {
+
+            const rect =
+                founderCard.getBoundingClientRect();
+
+            const x =
+                e.clientX - rect.left;
+
+            const y =
+                e.clientY - rect.top;
+
+            const rx =
+                ((y / rect.height) - .5) * -7;
+
+            const ry =
+                ((x / rect.width) - .5) * 9;
+
+            founderCard.style.transform =
+                `rotateX(${rx}deg)
+                 rotateY(${ry}deg)
+                 translateZ(25px)`;
+
+        }
+    );
+
+    founderCard.addEventListener(
+        "mouseleave",
+        () => {
+
+            founderCard.style.transform =
+                "rotateY(8deg) rotateX(3deg)";
+
+        }
+    );
+}
+
+
+/* =========================================================
+   SMOOTH ANCHOR OFFSET
+   ========================================================= */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(anchor => {
+
+        anchor.addEventListener(
+            "click",
+            function(e){
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+                if(!target) return;
+
+                e.preventDefault();
+
+                const offset = 95;
+
+                const top =
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    offset;
+
+                window.scrollTo({
+                    top,
+                    behavior:"smooth"
+                });
+
+            }
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
